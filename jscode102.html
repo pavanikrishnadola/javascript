@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    </head>
+    <body>
+        <h1>Javascript functions</h1>
+        <h2>callback functions</h2>
+        <p>The result of the calculation is:</p>
+        <p id="demo"></p>
+        <script>
+            function myDisplayer(something){
+                document.getElementById("demo").innerHTML=something;
+            }
+            function myCalculator(num1,num2,mycallback){
+                let sum=num1+num2;
+                mycallback(sum);
+            }
+            myCalculator(5,5,myDisplayer)
+        </script>
+    </body>
+</html>

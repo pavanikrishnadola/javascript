@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    </head>
+    <body>
+        <h2>The then() method</h2>
+        <p>Wait 3 seconds(3000 milliseconds) for this page to change.</p>
+        <h1 id="demo"></h1>
+        <script>
+            const mypromise=new Promise(function(myResolve,myReject){
+                setTimeout(function(){myResolve("I Love Coding!!!");},3000);
+            });
+            mypromise.then(function(value){
+                document.getElementById("demo").innerHTML=value;
+            });
+        </script>
+    </body>
+</html>
