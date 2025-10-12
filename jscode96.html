@@ -1,0 +1,28 @@
+<!--JS function sequence-->
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Javascript functions</h1>
+        <h2>Javascript function Sequence</h2>
+        <p>Javascript functions are excuted in the Sequence thet are called</p>
+        <p id="demo"></p>
+        <script type="text/javascript">
+            function myDisplayer(some){
+                document.getElementById("demo").innerHTML=some;
+            }
+            function myFirst(){
+                myDisplayer("Hello");
+            }
+            function mySecond(){
+                myDisplayer("Goodbye");
+            }
+            mySecond();
+            myFirst();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <form name="fm1">
+            <label for="fage">Age:</label>
+            <input type="text" id="fage" name="fage" autofocus>
+            <input type="submit" value="submit" onClick="return allnumeric(document.fm1.fage)">
+        </form>
+        <script type="text/javascript">
+            function allnumeric(inputtxt){
+                var number=/^[0-9]+$/;
+                if(inputtxt.value.match(number)){
+                    alert('your age is accepted.');
+                    return true;
+                }
+                else{
+                    alert('please input numeric characters only');
+                    inputtxt.focus();
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

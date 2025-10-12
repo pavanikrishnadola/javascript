@@ -1,0 +1,38 @@
+<!--Simple and Compound Interest-->
+<!doctype html>
+<html>
+    <head>
+        <title>demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            Principal<input type="text" id="V1" placeholder="principal" autofocus required><br><br>
+            Time<input type="text" id="V2" placeholder="time in years" autofocus required><br><br>
+            Rate Of Interst<input type="text" id="V3" placeholder="rate of interst" autofocus required><br><br>
+            Payable Amount:<table>
+                <tr><td><p id="p1"></p></td></tr>
+            </table><br><br>
+            <input type="button" value="simple interst" onClick="sic()">
+            <input type="button" value="compound interst" onClick="cic()">
+        </form>
+        <script type="text/javascript">
+            function sic(){
+                p=parseInt(document.getElementById("V1").value)
+                t=parseInt(document.getElementById("V2").value)
+                r=parseInt(document.getElementById("V3").value)
+                si=p*t*r/100;
+                document.getElementById("p1").innerHTML=si;
+            }
+            function cic(){
+                p=parseInt(document.getElementById("V1").value)
+                t=parseInt(document.getElementById("V2").value)
+                r=parseInt(document.getElementById("V3").value)
+                ci=p*(Math.pow(1+r/100,t));
+                document.getElementById("p1").innerHTML=ci;
+            }
+        </script>
+    </body>
+    </script>
+</html>
