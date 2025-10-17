@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer using JavaScript</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family:'times New Roman';
+            }
+        h1 {
+            color: #ac03e0;
+            margin-bottom: 2rem;
+            }
+
+        #colorbox {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            }
+        #colorbox span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <h1>Background Changer</h1>
+    <div id="colorbox"></div>
+    <script type="text/javascript">
+        function bgchange(color) {
+    let colorarray = ["#e58e26", "#f9b4ab", "#B1FB17", "#78e08f", "#fd79a8"];
+    document.body.style.background = colorarray[color];
+}
+var colorarray = ["#e58e26", "#f9b4ab", "#B1FB17", "#78e08f", "#fd79a8"];
+var colorbox = document.getElementById("colorbox");
+colorarray.forEach(function (color, index) {
+    let span = document.createElement("span");
+    span.style.backgroundColor = color;
+    span.addEventListener("click", function () {
+        bgchange(index);
+    });
+    colorbox.appendChild(span);
+});
+    </script>
+</body>
+</html>
